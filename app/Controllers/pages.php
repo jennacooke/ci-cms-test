@@ -45,10 +45,10 @@ class Pages extends Controller
 		    $data['body'] = html_entity_decode($data['pages']['body']);
 
 		    echo view('templates/header', [
-		    	'title' => $data['page']['meta_title'] ? $data['page']['meta_title'] : $data['page']['title'], 
-		    	'no_index' => $data['page']['no_index'],
-		    	'meta_title' => $data['page']['meta_title'],
-		    	'meta_description' => $data['page']['meta_description'],
+		    	'title' => $data['pages']['meta_title'] ? $data['pages']['meta_title'] : $data['pages']['title'], 
+		    	'no_index' => $data['pages']['no_index'],
+		    	'meta_title' => $data['pages']['meta_title'],
+		    	'meta_description' => $data['pages']['meta_description'],
 		    	'logo' => $this->logo_model->getFileData(),
 		    	'main_slug' => $this->main_slug,
 		    	'contact_slug' => $this->contact_slug,
