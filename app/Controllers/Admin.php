@@ -96,27 +96,31 @@ class Admin extends BaseController
 	}
 
 	public function global_details($submit = false) {
-	    $data['global_details'] = $this->footer_model->getFooterData();
-		
-	    if ($this->request->getVar('submit') == true ) {
-	    	
-		   	$this->footer_model->update(1 , [
-	            'email' => $this->request->getVar('email'),
-	            'ga_script'  => $this->request->getVar('ga_script'),
-	            'fb_script'  => $this->request->getVar('fb_script'),
+	    if ( $this->session->logged_in ) {
+		    $data['global_details'] = $this->footer_model->getFooterData();
+			$data['success'] = false;
 
-	        ]);
-		   	$data['success'] = true;
-		   	$data['global_details'] = array(
-		   		'email' => $this->request->getVar('email'),
-	            'ga_script'  => $this->request->getVar('ga_script'),
-	            'fb_script'  => $this->request->getVar('fb_script'),
-		   	);
-	    } 
+		    if ($this->request->getVar('submit') == true ) {
+		    	
+			   	$this->footer_model->update(1 , [
+		            'email' => $this->request->getVar('email'),
+		            'ga_script'  => $this->request->getVar('ga_script'),
+		            'fb_script'  => $this->request->getVar('fb_script'),
 
-        echo view('admin/global_details', $data);
-    	echo view('templates/footer', $data['global_details']);
-		   
+		        ]);
+			   	$data['success'] = true;
+			   	$data['global_details'] = array(
+			   		'email' => $this->request->getVar('email'),
+		            'ga_script'  => $this->request->getVar('ga_script'),
+		            'fb_script'  => $this->request->getVar('fb_script'),
+			   	);
+		    } 
+
+	        echo view('admin/global_details', $data);
+	    	echo view('templates/footer', $data['global_details']);
+	   } else {
+			redirect()->to('/admin');
+	   }
 	    
 	    
 	}
