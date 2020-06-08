@@ -9,13 +9,13 @@
             <form action="<?= current_url() ;?>" method="post">
             	<div class="form-group">
                     <?php echo form_label('Email for Contact form (& Footer)', 'email' );?>
-                    <?php echo form_input('email', esc($footer_details['email']), ['class'=>'form-control']);?>
+                    <?php echo form_input('email', esc($global_details['email']), ['class'=>'form-control']);?>
                 </div>
                 <div class="form-group">
                     <label for="ga_script">Google Analytics script</label>
                     <?php echo form_textarea(
                     	'ga_script', 
-                    	$footer_details['ga_script'] ? $footer_details['ga_script'] : '', 
+                    	$global_details['ga_script'] ? $global_details['ga_script'] : '', 
                     	['class'=>'form-control']
                     ); ?>
                 </div>
@@ -23,7 +23,7 @@
                     <label for="fb_script">Facebook Pixel script</label>
                     <?php echo form_textarea(
                     	'fb_script', 
-                    	$footer_details['fb_script'] ? $footer_details['fb_script'] : '', 
+                    	$global_details['fb_script'] ? $global_details['fb_script'] : '', 
                     	['class'=>'form-control']
                     ); ?>
                 </div>
