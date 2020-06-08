@@ -1,0 +1,239 @@
+.jumbotron {
+	background-image: url(../img/cda-interview-guide-resized.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7em 2em;
+    color: #fff;
+}
+#titlelogo {
+	display: inline-block;
+}
+img.img-responsive {
+	width: 100%;
+}
+footer {
+	background: #000066;
+	color: #fff;
+	padding: 1em;
+}
+footer a {
+	color: #FF6600;
+	text-decoration: underline;
+}
+footer .social a {
+	color: #fff;
+	text-decoration: none;
+}
+
+header {
+    padding: 10px 20px;
+    display: block;
+    position: relative;
+    z-index: 999;
+    background: rgba(255,255,255,0.7);
+}
+.mt-mob {
+	margin-top: 0;
+}
+.mobile-visible {
+    display: none;
+    visibility: hidden;
+}
+.vh100 {
+	/*min-height: calc(100vh - 80px);*/
+	height: calc(100vh - 120px);
+}
+h2 {
+	color: #000066;
+}
+header img {
+    height: auto;
+    max-height: 100px;
+    width: auto;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 991px){
+    .mobile-visible {
+        display: block;
+        visibility: visible;
+    }
+
+    header img {
+        max-height: 70px;
+    }
+}
+@media only screen and (min-width: 992px) {
+	.site-main-menu li:hover>.sub-menu {
+	    visibility: visible;
+	    opacity: 1;
+	    top: 100%;
+	    display: block;
+	    width: 200px;
+	}	
+}
+
+
+.site-main-menu .sub-menu {
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    right: 0;
+    top: 100px;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 20px 23px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+    -moz-box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+    opacity: 0;
+    visibility: hidden;
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar-toggle {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.site-main-menu {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+}
+.site-main-menu li a {
+    color: #333;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 14px;
+    opacity: .55;
+}
+.site-nav {
+    float: right;
+    visibility: visible;
+}
+
+.site-main-menu > li > a {
+    line-height: 3.3em;
+}
+.site-main-menu li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+.site-main-menu li .sub-menu li {
+	display: block;
+}
+.site-main-menu li a {
+    display: block;
+}
+
+@media only screen and (max-width: 991px){
+  
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        padding: 0;
+        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.08);
+        -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.08);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.08);
+    }
+    
+    .site-nav {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        max-width: 320px;
+        height: calc(100% - 52px);
+        left: auto;
+        top: 75px;
+        z-index: -1;
+        opacity: 1;
+        overflow: auto;
+        visibility: visible;
+        -webkit-box-shadow: 0 0 70px 0 rgba(0,0,0,.08);
+        -moz-box-shadow: 0 0 70px 0 rgba(0,0,0,.08);
+        box-shadow: 0 0 70px 0 rgba(0,0,0,.08);
+        -webkit-transition: all 0s ease-in-out;
+        -moz-transition: all 0s ease-in-out;
+        -o-transition: all 0s ease-in-out;
+        -ms-transition: all 0s ease-in-out;
+        transition: all 0s ease-in-out;
+    }
+    .site-main-menu li {
+        display: block;
+        margin: 0 30px;
+    }
+    .site-main-menu li a {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+        float: right;
+        line-height: 32px;
+        font-size: 21px;
+        color: #333;
+        padding: 10px;
+    }
+
+    .site-nav.mobile-menu-hide {
+        width: 0;
+        right: 0;
+        margin-right: -100%;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .sub-menu li {
+        display: block;
+        margin: 0 0 12px;
+        padding: 0;
+    }
+    .site-main-menu .sub-menu {
+    	display: block;
+	    position: initial;
+	    background-color: inherit;
+	    left: 0;
+	    top: 0;
+	    width: auto;
+	    max-width: none;
+	    border-radius: 0;
+	    -webkit-box-shadow: none;
+	    -moz-box-shadow: none;
+	    box-shadow: none;
+	    opacity: 1;
+	    visibility: visible;
+	    -moz-transition: none;
+	    -webkit-transition: none;
+	    transition: none;
+	}
+    .mt-mob {
+    	margin-top: 5em;
+    }
+}
